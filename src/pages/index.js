@@ -9,22 +9,11 @@ import * as styles from "../components/index.module.css"
 const links = [
   {
     text: "Hello World!!",
-    url: "https://www.burnsyhosting.com",
+    url: "https://www.burnsyhosting.co.uk",
     description:
       "welcome to my very basic site",
   },
 ]
-
-
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://www.burnsyhosting.com/docs/",
-  },
-]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
   <Layout>
@@ -40,33 +29,16 @@ const IndexPage = () => (
         style={{ marginBottom: `var(--space-3)` }}
       />
       <h1>
-        Welcome to <b>Gatsby!</b>
+        Welcome to <b>Burnsy Hosting!</b>
       </h1>
       <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
+        <b>This is a starter page:</b>{" "}
         <br />
-        Edit <code>src/pages/index.js</code> to update this page.
+        <code>src/pages/index.js</code>.
       </p>
     </div>
     <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
     </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
   </Layout>
 )
 
