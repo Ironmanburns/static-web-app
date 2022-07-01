@@ -1,0 +1,19 @@
+{
+  "navigationFallback": {
+    "rewrite": "index.html",
+    "exclude": ["/images/*.{png,jpg,gif}", "/css/*"]
+  },
+
+"networking": {
+  "allowedIpRanges": ["AzureFrontDoor.Backend"]
+},
+
+"forwardingGateway": {
+  "requiredHeaders": {
+    "X-Azure-FDID" : "1f25dc9c-abc8-48bd-9945-51ae5973e444"
+  },
+  "allowedForwardedHosts": [
+    "my-sitename.azurefd.net"
+  ]
+  }
+}
